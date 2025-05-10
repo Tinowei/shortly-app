@@ -1,18 +1,12 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import AppLayout from './layouts/AppLayout.vue';
 
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-
-  </main>
+  <app-layout>
+    <div class="bg-zinc-500">this is slot content</div>
+  </app-layout>
 </template>
 
 <style scoped></style>
