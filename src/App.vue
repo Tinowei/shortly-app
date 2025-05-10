@@ -4,9 +4,20 @@ import AppLayout from './layouts/AppLayout.vue';
 </script>
 
 <template>
-  <app-layout>
-    <div class="bg-zinc-500">this is slot content</div>
-  </app-layout>
+
+  <v-app>
+
+    <app-layout>
+      <template #content>
+        <div>this is slot content
+          <v-btn>vuetifys' button</v-btn>
+        </div>
+      </template>
+    </app-layout>
+
+
+
+  </v-app>
 </template>
 
 <style scoped></style>
