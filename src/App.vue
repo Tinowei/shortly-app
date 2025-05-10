@@ -1,22 +1,19 @@
 <script setup>
 import AppLayout from './layouts/AppLayout.vue';
+import MainContent from './components/MainContent.vue';
 
 </script>
 
 <template>
 
+
   <v-app>
 
     <app-layout>
       <template #content>
-        <div>this is slot content
-          <v-btn>vuetifys' button</v-btn>
-        </div>
+        <main-content></main-content>
       </template>
     </app-layout>
-
-
-
   </v-app>
 </template>
 
