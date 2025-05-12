@@ -1,10 +1,17 @@
 @import './base.css';
 @import 'tailwindcss';
 
+@layer base {
+  h2 {
+    @apply text-3xl font-bold;
+  }
+}
+
 @theme {
   /* Primary Colors */
   --color-cyan: hsl(180, 66%, 49%);
   --color-dark-violet: hsl(257, 27%, 26%);
+  --color-light-gray: hsl(260, 16%, 96%);
 
   /* Secondary */
   --color-red: hsl(0, 87%, 67%);
@@ -26,36 +33,36 @@
   --max-width-mobile: 375px;
 }
 
-/* #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+@layer components {
+  .link-container {
+    @apply rounded-xl relative top-[-90px] max-w-[900px] mx-auto md:flex md:flex-col md:top-[-60px];
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  .link-history-card {
+    @apply bg-white flex flex-col gap-4 mt-8 py-4 rounded-md px-6 shadow-md md:flex-row flex-grow;
   }
-} */
+
+  .card-container {
+    @apply max-w-[900px] mx-auto mb-26 md:flex md:relative;
+  }
+
+  .feature-card {
+    @apply z-10 bg-white flex flex-col items-center m-4 mt-16 p-9 rounded-md md:max-w-[350px] md:items-start;
+  }
+
+  .card-icon {
+    @apply bg-[var(--color-dark-violet)] p-5 rounded-full relative mt-[-80px];
+  }
+
+  .card-title {
+    @apply font-bold text-[var(--color-very-dark-violet)] my-[25px] md:text-left;
+  }
+
+  .card-content {
+    @apply text-center font-bold text-[var(--color-gray)] md:text-left md:text-sm;
+  }
+
+  .get-started-btn {
+    @apply flex max-md:mx-auto font-bold px-8 py-2  text-white bg-[var(--color-cyan)] rounded-full cursor-pointer;
+  }
+}
