@@ -38,19 +38,19 @@ const items = [
 const icons = [
   {
     media: 'facebook',
-    path: '../assets/images/icon-facebook.svg'
+    path: '../assets/images/icon-facebook.svg?url'
   },
   {
     media: 'twitter',
-    path: '../assets/images/icon-twitter.svg'
+    path: '../assets/images/icon-twitter.svg?url'
   },
   {
     media: 'pinterest',
-    path: '../assets/images/icon-pinterest.svg'
+    path: '../assets/images/icon-pinterest.svg?url'
   },
   {
     media: 'instagram',
-    path: '../assets/images/icon-instagram.svg'
+    path: '../assets/images/icon-instagram.svg?url'
   },
 ]
 

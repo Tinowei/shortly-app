@@ -10,7 +10,7 @@ import FeaturesOverview from './FeaturesOverview.vue';
   <div class="max-w-[1280px] w-full mx-auto">
     <div class="md:flex md:flex-row-reverse md:gap-4 md:mx-4">
       <div class="img-container w-full md:min-w-[500px]  md:w-4/8  overflow-hidden">
-        <img src="../assets/images/illustration-working.svg"
+        <img src="../assets/images/illustration-working.svg?url"
           class="w-[100%] max-md:h-full relative my-10 scale-120 md:scale-100 left-16 md:left-12" alt="Illustration" />
       </div>
       <div class="text-container pb-16 md:w-4/8 md:mt-12 md:pl-4">
