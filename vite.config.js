@@ -9,6 +9,9 @@ import svgLoader from 'vite-svg-loader'
 // https://vite.dev/config/
 export default defineConfig({
   base: '/shortly-app/',
+  build: {
+    assetsInlineLimit: 0,
+  },
   plugins: [vue(), vueDevTools(), tailwindcss(), svgLoader()],
   resolve: {
     alias: {
