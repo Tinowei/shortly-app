@@ -1,10 +1,63 @@
 <script setup>
 // import { mdi } from 'vuetify/lib/iconsets/mdi-svg';
 import appLogo from '../assets/icons/logo.svg'
+import footerLogo from '../assets/icons/footer-logo.svg'
 import { mdiMenu } from '@mdi/js';
 import { ref } from 'vue';
 const menuToggle = ref(false);
 
+//menuItems
+const items = [
+  {
+    title: 'Features',
+    subItems: [
+      'Link Shortening',
+      'Branded Links',
+      'Analytics',
+    ]
+  },
+  {
+    title: 'Pricing',
+    subItems: [
+      'Blog',
+      'Developers',
+      'Support'
+    ]
+  },
+  {
+    title: 'Resources',
+    subItems: [
+      'About',
+      'Our Team',
+      'Careers',
+      'Contact'
+    ]
+  },
+]
+// media icon
+const icons = [
+  {
+    media: 'facebook',
+    path: '../assets/icons/icon-facebook.svg'
+  },
+  {
+    media: 'twitter',
+    path: '../assets/icons/icon-twitter.svg'
+  },
+  {
+    media: 'pinterest',
+    path: '../assets/icons/icon-pinterest.svg'
+  },
+  {
+    media: 'instagram',
+    path: '../assets/icons/icon-instagram.svg'
+  },
+]
+
+// 動態導入圖片路徑
+const getImage = (relativePath) => {
+  return new URL(relativePath, import.meta.url).href
+}
 </script>
 <template>
   <header class="my-header max-w-[1280px] w-full mx-auto flex justify-between  pt-10 pb-[20px] px-[24px]">
@@ -34,7 +87,32 @@ const menuToggle = ref(false);
       <li>Sign Up</li>
     </ul>
   </header>
-  <slot name="content"></slot>
+
+  <div>
+    <slot name="content"></slot>
+  </div>
+
+  <!-- footer -->
+  <footer
+    class="max-w-[1280px] w-full mx-auto bg-[var(--color-very-dark-blue)] text-white flex flex-col items-center py-12 md:flex-row md:justify-around md:items-start">
+    <footer-logo class="footer-logo md:mr-8"></footer-logo>
+
+    <!-- footer-menu-list -->
+    <div v-for="(item, idx) in items" :key="idx" class="menu flex flex-col items-center text-center py-4 md:p-0 ">
+      <div class="menuItem text-xl my-4 font-bold md:mt-0">{{ item.title }}</div>
+      <ul>
+        <li v-for="(subItem, subIdx) in item.subItems" :key="subIdx"
+          class="subItem text-[14px] text-[var(--color-gray)] py-2 my-2 cursor-pointer">{{
+            subItem }}</li>
+      </ul>
+    </div>
+
+    <div class="flex gap-4 max-md:mt-4">
+      <div v-for="icon in icons" :key="icon.media" class="social-media">
+        <img :src="getImage(icon.path)" :alt="icon.media" />
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped>
@@ -46,13 +124,13 @@ nav a:hover {
   color: black;
 }
 
-li {
+.my-menu-list>li {
   padding: 16px;
   cursor: pointer;
   margin: 0 30px;
 }
 
-li:hover {
+.my-menu-list>li:hover {
   border-radius: 30px;
   background-color: var(--color-cyan);
 }

@@ -5,16 +5,11 @@ import MainContent from './components/MainContent.vue';
 </script>
 
 <template>
-
-
-  <v-app>
-
-    <app-layout>
-      <template #content>
-        <main-content></main-content>
-      </template>
-    </app-layout>
-  </v-app>
+  <app-layout>
+    <template #content>
+      <main-content></main-content>
+    </template>
+  </app-layout>
 </template>
 
 <style scoped></style>
