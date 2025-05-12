@@ -4,6 +4,7 @@ import appLogo from '../assets/images/logo.svg'
 import footerLogo from '../assets/images/footer-logo.svg'
 import { mdiMenu } from '@mdi/js';
 import { ref } from 'vue';
+
 const menuToggle = ref(false);
 
 //menuItems
@@ -34,30 +35,8 @@ const items = [
     ]
   },
 ]
-// media icon
-const icons = [
-  {
-    media: 'facebook',
-    path: '../assets/images/icon-facebook.svg?url'
-  },
-  {
-    media: 'twitter',
-    path: '../assets/images/icon-twitter.svg?url'
-  },
-  {
-    media: 'pinterest',
-    path: '../assets/images/icon-pinterest.svg?url'
-  },
-  {
-    media: 'instagram',
-    path: '../assets/images/icon-instagram.svg?url'
-  },
-]
 
-// 動態導入圖片路徑
-const getImage = (relativePath) => {
-  return new URL(relativePath, import.meta.url).href
-}
+
 </script>
 <template>
   <header class="my-header max-w-[1280px] w-full mx-auto flex justify-between  pt-10 pb-[20px] px-[24px]">
@@ -108,8 +87,17 @@ const getImage = (relativePath) => {
     </div>
 
     <div class="flex gap-4 max-md:mt-4">
-      <div v-for="icon in icons" :key="icon.media" class="social-media">
-        <img :src="getImage(icon.path)" :alt="icon.media" />
+      <div class="social-media">
+        <img src="../assets/images/icon-facebook.svg?url" alt="facebook " />
+      </div>
+      <div class="social-media">
+        <img src="../assets/images/icon-twitter.svg?url" alt="twitter " />
+      </div>
+      <div class="social-media">
+        <img src="../assets/images/icon-pinterest.svg?url" alt="pinterest " />
+      </div>
+      <div class="social-media">
+        <img src="../assets/images/icon-instagram.svg?url" alt="instagram " />
       </div>
     </div>
   </footer>
