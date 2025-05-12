@@ -14,13 +14,10 @@
     "@tailwindcss/vite": "^4.1.6",
     "pinia": "^3.0.1",
     "tailwindcss": "^4.1.6",
-    "vue": "^3.5.13",
-    "vuetify": "^3.8.4"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
-    "@mdi/font": "^7.4.47",
-    "@mdi/js": "^7.4.47",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/eslint-config-prettier": "^10.2.0",
     "eslint": "^9.22.0",
