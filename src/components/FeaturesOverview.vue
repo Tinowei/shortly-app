@@ -12,7 +12,7 @@
     <div class="card-container">
       <div class="feature-card  ">
         <div class="card-icon">
-          <img src="../assets/icons/icon-brand-recognition.svg" alt="brand recognition img">
+          <img :src="getImage('../assets/icons/icon-brand-recognition.svg')" alt="brand recognition img">
         </div>
         <div class="card-title">Brand Recognition</div>
         <div class="card-content"> Boost your brand recognition with each click.
@@ -23,7 +23,7 @@
       </div>
       <div class="feature-card md:relative md:top-[40px]">
         <div class="card-icon">
-          <img src="../assets/icons/icon-detailed-records.svg" alt="detailed records img">
+          <img :src="getImage('../assets/icons/icon-detailed-records.svg')" alt="detailed records img">
         </div>
         <div class="card-title">Detailed Records</div>
         <div class="card-content ">Gain insights into who is clicking your links.
@@ -35,7 +35,7 @@
       </div>
       <div class="feature-card md:relative md:top-[80px]">
         <div class="card-icon">
-          <img src="../assets/icons/icon-fully-customizable.svg" alt="fully customizable img" width="40px"
+          <img :src="getImage('../assets/icons/icon-fully-customizable.svg')" alt="fully customizable img" width="40px"
             height="40px">
         </div>
         <div class="card-title">Fully Customizable</div>
@@ -58,6 +58,10 @@
 </template>
 
 <script setup>
+
+const getImage = (relativePath) => {
+  return new URL(relativePath, import.meta.url).href
+}
 
 </script>
 
