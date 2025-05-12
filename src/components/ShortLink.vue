@@ -29,7 +29,7 @@ function OnCopy(idx) {
       <!-- link changer -->
       <div
         class="link-changer relative overflow-hidden w-full flex flex-col gap-4 p-6 rounded-xl bg-[var(--color-dark-violet)] md:flex md:flex-row">
-        <img src="../assets/icons/bg-shorten-mobile.svg" alt="bg-shorten-mobile" width="250px"
+        <img src="../assets/images/bg-shorten-mobile.svg" alt="bg-shorten-mobile" width="250px"
           class="absolute top-0 right-0 ">
         <div class="z-10 md:flex-grow md:w-[80%] pb-2">
           <input v-model="inputLink" type="text" placeholder="Shorten a link here..."

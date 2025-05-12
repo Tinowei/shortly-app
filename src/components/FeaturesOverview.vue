@@ -12,7 +12,7 @@
     <div class="card-container">
       <div class="feature-card  ">
         <div class="card-icon">
-          <img :src="getImage('../assets/icons/icon-brand-recognition.svg')" alt="brand recognition img">
+          <img src="../assets/images/icon-brand-recognition.svg" alt="brand recognition img">
         </div>
         <div class="card-title">Brand Recognition</div>
         <div class="card-content"> Boost your brand recognition with each click.
@@ -23,7 +23,7 @@
       </div>
       <div class="feature-card md:relative md:top-[40px]">
         <div class="card-icon">
-          <img :src="getImage('../assets/icons/icon-detailed-records.svg')" alt="detailed records img">
+          <img src='../assets/images/icon-detailed-records.svg' alt="detailed records img">
         </div>
         <div class="card-title">Detailed Records</div>
         <div class="card-content ">Gain insights into who is clicking your links.
@@ -35,7 +35,7 @@
       </div>
       <div class="feature-card md:relative md:top-[80px]">
         <div class="card-icon">
-          <img :src="getImage('../assets/icons/icon-fully-customizable.svg')" alt="fully customizable img" width="40px"
+          <img src='../assets/images/icon-fully-customizable.svg' alt="fully customizable img" width="40px"
             height="40px">
         </div>
         <div class="card-title">Fully Customizable</div>
@@ -48,7 +48,7 @@
     </div>
     <div
       class=" flex flex-col justify-center items-center py-20 bg-[var(--color-dark-violet)] text-white
-    bg-[url('../assets/icons/bg-boost-mobile.svg')] md:bg-[url('../assets/icons/bg-boost-desktop.svg')] bg-no-repeat bg-cover bg-right-top">
+    bg-[url('../assets/images/bg-boost-mobile.svg')] md:bg-[url('../assets/images/bg-boost-desktop.svg')] bg-no-repeat bg-cover bg-right-top">
       <h3 class="z-5 text-2xl font-bold">Boost your links today</h3>
       <button class="get-started-btn z-5 mt-10 "><a href="" class="py-3">Get
           Started</a></button>
@@ -58,11 +58,6 @@
 </template>
 
 <script setup>
-
-const getImage = (relativePath) => {
-  return new URL(relativePath, import.meta.url).href
-}
-
 </script>
 
 <style scoped>

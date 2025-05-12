@@ -1,7 +1,7 @@
 <script setup>
 // import { mdi } from 'vuetify/lib/iconsets/mdi-svg';
-import appLogo from '../assets/icons/logo.svg'
-import footerLogo from '../assets/icons/footer-logo.svg'
+import appLogo from '../assets/images/logo.svg'
+import footerLogo from '../assets/images/footer-logo.svg'
 import { mdiMenu } from '@mdi/js';
 import { ref } from 'vue';
 const menuToggle = ref(false);
@@ -38,19 +38,19 @@ const items = [
 const icons = [
   {
     media: 'facebook',
-    path: '../assets/icons/icon-facebook.svg'
+    path: '../assets/images/icon-facebook.svg'
   },
   {
     media: 'twitter',
-    path: '../assets/icons/icon-twitter.svg'
+    path: '../assets/images/icon-twitter.svg'
   },
   {
     media: 'pinterest',
-    path: '../assets/icons/icon-pinterest.svg'
+    path: '../assets/images/icon-pinterest.svg'
   },
   {
     media: 'instagram',
-    path: '../assets/icons/icon-instagram.svg'
+    path: '../assets/images/icon-instagram.svg'
   },
 ]
 
