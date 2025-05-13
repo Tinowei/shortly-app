@@ -39,7 +39,8 @@ const items = [
 
 </script>
 <template>
-  <header class="my-header max-w-[1280px] w-full mx-auto flex justify-between  pt-10 pb-[20px] px-[24px]">
+  <header
+    class="my-header sticky top-0 z-50 bg-white max-w-[1280px] w-full mx-auto flex justify-between  pt-10 pb-[20px] px-[24px]">
     <app-logo></app-logo>
     <nav class="hidden grow-1 md:flex justify-between md:mx-4 text-[var(--color-gray)] font-semibold">
       <div class="grow-1 ml-8 ">
@@ -57,7 +58,7 @@ const items = [
     </div>
     <!-- custom List -->
     <ul v-if="menuToggle"
-      class="my-menu-list z-50 fixed border w-[calc(100vw-3rem)] top-[95px] left-[50%] right-[50%] transform -translate-x-[50%] text-center text-white font-bold bg-[var(--color-dark-violet)] rounded-xl pt-4 pb-10 md:hidden">
+      class="my-menu-list z-50 fixed border w-[calc(100vw-3rem)] top-[110px] left-[50%] right-[50%] transform -translate-x-[50%] text-center text-white font-bold bg-[var(--color-dark-violet)] rounded-xl pt-4 pb-10 md:hidden">
       <li>Features</li>
       <li>Pricing</li>
       <li>Resources</li>
